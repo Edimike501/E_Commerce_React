@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CssAsset//font-awe//css/all.min.css" />
+    <link rel="stylesheet" href="./CssAsset/icofont/icofont.min.css" />
+    <link rel="stylesheet" href="./CssAsset/checkout.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="cart.html"> <i class="icofont-arrow-left"></i></a>
+      <div class="window">
+        <div class="order-info">
+          <div class="order-info-content">
+            <h2>Order Summary</h2>
+            <div class="line"></div>
+            <div class="product-panel">
+              <table class="order-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="./Media/shoe1.png" class="full-width" />
+                    </td>
+                    <td>
+                      <br />
+                      <span class="thin brand">Nike</span> <br />
+                      Free Run 3.0 Women<br />
+                      <span class="thin small det">
+                        Quantity: 2, Size: 10.5<br /><br
+                      /></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="price">$99.95</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="line"></div>
+              <table class="order-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="./Media/shoe1.png" class="full-width" />
+                    </td>
+                    <td>
+                      <br />
+                      <span class="thin">Nike</span> <br />
+                      Free Run 3.0 Women<br />
+                      <span class="thin small det">
+                        Quantity: 2, Size: 10.5<br /><br
+                      /></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="price">$99.95</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="line"></div>
+              <table class="order-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="./Media/shoe1.png" class="full-width" />
+                    </td>
+                    <td>
+                      <br />
+                      <span class="thin">Nike</span> <br />
+                      Free Run 3.0 Women<br />
+                      <span class="thin small det">
+                        Quantity: 2, Size: 10.5<br /><br
+                      /></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="price">$99.95</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="line"></div>
+              <table class="order-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="./Media/shoe1.png" class="full-width" />
+                    </td>
+                    <td>
+                      <br />
+                      <span class="thin">Fjällräven</span> <br />Vintage
+                      Backpack<br />
+                      <span class="thin small det">
+                        Quantity: 2, Size: 10.5</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="price">$235.95</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="line"></div>
+              <table class="order-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="./Media/shoe1.png" class="full-width" />
+                    </td>
+                    <td>
+                      <br />
+                      <span class="thin">Monobento</span> <br />Double
+                      Lunchbox<br />
+                      <span class="thin small det">
+                        Quantity: 2, Size: 10.5</span
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="price">$25.95</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="line"></div>
+            <div class="total">
+              <span>
+                <div class="thin dense mb-10 vat">VAT 19%</div>
+                <div class="thin dense mb-10">Delivery</div>
+                TOTAL
+              </span>
+              <span class="hyphen">
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+              </span>
+              <span>
+                <div class="thin dense mb-10">$68.75</div>
+                <div class="thin dense mb-10">$4.95</div>
+                $435.55
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="credit-info">
+          <div class="credit-info-content">
+            <table class="half-input-table">
+              <tr>
+                <td>Please select your card:</td>
+                <td>
+                  <div class="dropdown" id="card-dropdown">
+                    <div class="dropdown-btn" id="current-card">Visa</div>
+                    <div class="dropdown-select">
+                      <ul>
+                        <li>Master Card</li>
+                        <li>American Express</li>
+                        <li>Paypal</li>
+                      </ul>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <div>
+              <img
+                src="./Media/visa_logo%20%281%29.png"
+                height="80"
+                class="credit-card-image"
+                id="credit-card-image"
+              />
+              Card Number
+              <input class="input-field" />
+              Card Holder
+              <input class="input-field" />
+              <table class="half-input-table">
+                <tr>
+                  <td>
+                    Expires
+                    <input class="input-field" />
+                  </td>
+                  <td>
+                    CVC
+                    <input class="input-field" />
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <button class="pay-btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./JsAsset/checkout.js"></script>
+  </body>
+</html>

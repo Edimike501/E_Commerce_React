@@ -1,0 +1,88 @@
+:root {
+  --black: #101010;
+  --bck-drop: #1a1818;
+  --bck-drop1: #201f1f;
+  --dim-red: #804048;
+  --red: #a02038;
+  --light-red: #a03048;
+  --gray: #888888;
+  --dim-gray: #a09898;
+  --dim-black: #303030;
+  --lgt-black: #585050;
+  --bg1: #c8c8c8;
+  --bg: #e8e8e8;
+  --onbg: #f0f0f0;
+  --pink: #c81f5a;
+}
+
+* {
+  color: var(--lgt-black);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--bg);
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+body {
+  background-color: var(--bg1);
+}
+
+.head {
+  text-align: center;
+  padding: 25px 0;
+  color: var(--lgt-black);
+}
+
+.pg-title {
+  font-weight: 400;
+  font-size: calc(1.475rem + 2.7vw);
+  line-height: 1.2;
+}
+@media (min-width: 1200px) {
+  .pg-title {
+    font-size: 3.5rem;
+  }
+}
+
+.tg-line {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.c-shopping {
+  color: var(--pink);
+}
+
+td > * {
+  /* text-align: center; */
+  padding-left: 2.1rem;
+  /* background-color: #101010 !important; */
+}
+
+.price > strong {
+  padding-left: 0;
+}
+
+.fa-trash {
+  color: var(--pink);
+}
+
+.btn {
+  background-color: var(--pink) !important;
+  border: none;
+}
+
+.fa-gift {
+  color: var(--bg);
+  padding-right: 0.5rem;
+}
+
+tbody.det {
+  max-height: 800px;
+  overflow-y: scroll;
+}

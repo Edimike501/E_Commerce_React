@@ -1,0 +1,11 @@
+###
+GET http://localhost:8080/
+Content-Type: application/json
+
+###
+POST http://localhost:8080/subscribe_newsletter
+Content-Type: application/json
+
+{
+  "email": "user@gmail.com"
+}
