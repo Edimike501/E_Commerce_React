@@ -1,0 +1,158 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 35px;
+  color: var(--pink);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+form {
+  padding: 30px 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+  flex-direction: column;
+  box-shadow: 0 0 10px 2px #5850505a;
+}
+
+.field {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px 12px;
+  border-bottom: 1.5px solid var(--dim-gray);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.field i {
+  color: var(--lgt-black);
+}
+.field label {
+  font-weight: bold;
+  color: var(--pink);
+}
+
+.field input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--lgt-black);
+  font-size: 16px;
+}
+
+.field select {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--lgt-black);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.field textarea {
+  width: 100%;
+  min-height: 200px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--lgt-black);
+  font-size: 16px;
+}
+.field:active {
+  border-bottom: 1.5px solid var(--lgt-black);
+}
+
+.field input::placeholder {
+  color: var(--gray);
+  text-transform: capitalize;
+  font-size: 16px;
+}
+.field textarea::placeholder {
+  color: var(--gray);
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .forgot-password {
+  text-decoration: none;
+  color: var(--pink);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+form .already-a-member {
+  margin: 20px 0;
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  color: var(--dim-black);
+}
+form .not-a-member {
+  display: flex;
+  gap: 15px;
+  color: var(--dim-black);
+}
+form a {
+  text-decoration: none;
+  color: var(--pink);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+form .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form button {
+  background-color: var(--pink);
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--onbg);
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+.two-col {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}

@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
-import SignUp from "../components/SignUp";
-import Login from "../components/Login";
+import { Link, useParams } from "react-router-dom";
 import "./css/Form.css";
 // import { changeForm } from "../components/re-usable components/form";
 
@@ -58,20 +56,10 @@ function Form() {
   const signUp = (e) => {
     console.log(e.target);
   };
-  /*  useEffect(() => {
-    changeForm(type);
-  }); */
-
-  const location = useLocation();
-
   useEffect(() => {
-    console.log(location);
-    document.body.style.overflow = "auto";
-  }, [location]);
-
-  return <div>{type == "signup" ? <SignUp /> : <Login />}</div>;
-
-  /* return (
+    changeForm(type);
+  });
+  return (
     <div className="form-hold">
       <div className="wrapper">
         <div className="title-text" ref={titleRef}>
@@ -154,11 +142,13 @@ function Form() {
               </div>
               <div className="field btn">
                 <div className="btn-layer"></div>
+                {/* <Link to="/form/login"> */}
                 <input
                   type="button"
                   value="Signup"
                   onClick={(e) => signUp(e)}
                 />
+                {/* </Link> */}
               </div>
             </form>
             <form className="login">
@@ -189,6 +179,7 @@ function Form() {
               </div>
               {/* <div className="signup-link">
                 Not a member? <a href="">Signup now</a>
+              </div> */}
             </form>
           </div>
         </div>
@@ -207,7 +198,7 @@ function Form() {
         </div>
       </div>
     </div>
-  ); */
+  );
 }
 
 export default Form;

@@ -1,12 +1,13 @@
 import { useContext, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Alert from "./Alert";
 import ValueContext from "./ValueContext";
 import shoe1 from "/Media/shoe1.png";
 import "./css/ProductDisplay.css";
 import "./css/Alert.css";
 
-function ProductDisplay() {
+function ProductDisplay({ limit }) {
+  const navigate = useNavigate();
   const prodCont = useRef();
   const alertElement = useRef();
   const { cart, setCart, productArray } = useContext(ValueContext);
@@ -39,13 +40,50 @@ function ProductDisplay() {
     localStorage.setItem("cart", JSON.stringify(products));
     Alert(alertElement.current, "product added successfully");
   };
+
+  const loadMore = () => {
+    navigate("/products");
+  };
   useEffect(() => {});
   return (
-    <div className="product-cont">
+    <div className="product-cont flex-col gap-10">
       <div className="alert-cont" ref={alertElement}></div>
       <div className="maxWidth product-cont-sub" ref={prodCont}>
-        {productArray.map((product) => {
-          // console.log(product);
+        {productArray.map((product, i) => {
+          if (limit) {
+            if (i >= 6) return;
+            return (
+              <div className="product" key={product.id}>
+                <input type="hidden" value={product.id} />
+                <div className="bookmark">
+                  <i className="icofont-book-mark"></i>
+                </div>
+                <div className="image flex-it">
+                  <img src={shoe1} alt="" />
+                </div>
+                <div className="det">
+                  <p className="name">{product.title}</p>
+                  <div className="brnd-cont flex-spc-btwn">
+                    <p className="brand">{product.category}</p>
+                    <p className="price">${product.price}</p>
+                  </div>
+                  <div className="rating">
+                    <i className="icofont-ui-rating"></i>
+                    <i className="icofont-ui-rating"></i>
+                    <i className="icofont-ui-rating"></i>
+                    <i className="icofont-ui-rating"></i>
+                    <i className="icofont-ui-rating"></i>
+                  </div>
+                  <div className="btn flex-spc-btwn">
+                    <Link to={`/products/${product.id}`}>
+                      <div>More</div>
+                    </Link>
+                    <button onClick={addToCart}>add to cart</button>
+                  </div>
+                </div>
+              </div>
+            );
+          }
           return (
             <div className="product" key={product.id}>
               <input type="hidden" value={product.id} />
@@ -79,6 +117,12 @@ function ProductDisplay() {
           );
         })}
       </div>
+      <button className="capitalize" onClick={loadMore}>
+        load more
+      </button>
+      {/* <Link to="/products">
+        <button className="capitalize">load more</button>
+      </Link> */}
     </div>
   );
 }

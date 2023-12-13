@@ -1,10 +1,16 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./css/ForgotPassword.css";
 
 function ForgotPassword() {
   const verificationRef = useRef();
   const titleRef = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location);
+    document.body.style.overflow = "auto";
+  }, [location]);
 
   return (
     <div className="verification-cont" ref={verificationRef}>

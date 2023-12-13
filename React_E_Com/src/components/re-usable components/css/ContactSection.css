@@ -1,0 +1,45 @@
+.about-closing-remark {
+  padding: 0 20px;
+  background-color: var(--dim-black);
+}
+
+.about-closing-remark > div {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  /* border-color: rgb(148, 163, 184, 0.5); */
+}
+
+.about-closing-remark .about-closing-text {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.about-closing-remark button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: var(--pink);
+  border-radius: 20px;
+  color: var(--white);
+  font-weight: 500;
+  margin: 0 auto;
+  font-size: small;
+  cursor: pointer;
+}
+
+.about-closing-remark button > i {
+  margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .about-closing-remark .about-closing-text {
+    font-size: 25px;
+  }
+}

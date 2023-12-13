@@ -1,0 +1,132 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+}
+
+.form-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-sub h1 {
+  color: var(--pink);
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.form-sub .det {
+  width: 100%;
+  color: var(--lgt-black);
+  font-size: 16px;
+  padding-right: 50px;
+  line-height: 1.7;
+}
+.form-sub p.top {
+  color: var(--dim-black);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+form h2 {
+  color: var(--pink);
+  font-size: 35px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  align-self: flex-start;
+}
+
+form .field {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px 12px;
+  border-bottom: 1.5px solid var(--dim-gray);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+form .field i {
+  color: var(--lgt-black);
+}
+
+form .field input {
+  /* margin-top: 16px; */
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--lgt-black);
+  font-size: 16px;
+}
+form .field textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--lgt-black);
+  font-size: 16px;
+}
+form .field:active {
+  border-bottom: 1.5px solid var(--lgt-black);
+}
+
+form .field input::placeholder {
+  color: var(--gray);
+  text-transform: capitalize;
+  font-size: 16px;
+}
+form .field textarea::placeholder {
+  color: var(--gray);
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+form .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form button {
+  background-color: var(--pink);
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--onbg);
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  transition: 0.4s ease;
+  padding: 8px 20px;
+  text-transform: capitalize;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 850px) {
+  .form-sub {
+    flex-direction: column;
+    gap: 60px;
+  }
+}

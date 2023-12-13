@@ -4,18 +4,13 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  height: 80px;
   position: relative;
-  /* background-color: aliceblue; */
+  padding: 15px 0;
+  background-color: #252525;
+  /* margin-bottom: 60px; */
 }
 
 .nav-cont > div:nth-child(1) {
-  /* width: 80%; */
-  /* background-color: #aaa; */
-  /* display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  place-items: center; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,10 +19,8 @@
 .nav-cont ul.links {
   list-style: none;
   display: flex;
-  /* background-color: #aaa; */
   justify-content: flex-start;
   align-items: center;
-  /* height: 100%; */
 }
 
 .nav-cont ul.links .nav-logo {
@@ -38,12 +31,16 @@
   cursor: pointer;
 }
 
+.nav-cont a {
+  text-decoration: none;
+}
+
 .nav-cont ul.links li {
   height: 100%;
-  padding: 10px 7px;
-  margin: 20px;
+  background-color: transparent;
+  padding: 10px 5px;
+  margin: 20px 15px;
   text-transform: uppercase;
-  /* background-color: #aaa; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,14 +59,55 @@
 .right-side-header {
   display: flex;
   align-items: center;
-  /* background-color: #aaa; */
 }
 
 #toFormPg {
+  cursor: pointer;
+}
+#toFormPg p {
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+#toFormPg p:hover {
+  color: var(--pink);
+}
+
+#toFormPg > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+#toFormPg > div {
+  position: absolute;
+  width: auto;
+  background-color: var(--bg1);
+  top: calc(100% + 10px);
+  padding: 9px;
   display: flex;
-  align-items: center;
-  /* text-decoration: none; */
-  /* color: var(--bg); */
+  flex-direction: column;
+  gap: 7px;
+  transform-origin: top;
+  transition: 0.4s ease;
+  transform: scaleY(0);
+}
+#toFormPg > div.dropped {
+  transform: scaleY(1);
+}
+
+#toFormPg > div > a {
+  transition: 0.4s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--dim-black);
+  text-align: center;
+}
+#toFormPg > div > a:hover {
+  color: var(--pink);
+}
+#toFormPg > div > a:nth-child(1) {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--gray);
 }
 
 img.user-dp {
@@ -82,7 +120,7 @@ img.user-dp {
 img.user-dp + p {
   padding: 5px;
   transition: 0.3s;
-  cursor: pointer;
+  color: var(--bg1);
   cursor: pointer;
 }
 
@@ -328,7 +366,7 @@ div.header-cart .cart:hover P {
   left: 0;
   width: 100%;
   background-color: #1d1d1ded;
-  height: 100vh;
+  height: 100%;
   display: none;
   opacity: 0;
   z-index: 10;
@@ -355,7 +393,6 @@ div.header-cart .cart:hover P {
   padding: 5px 0;
   margin: 15px 0;
   color: var(--bg1);
-  /* background-colo r: aliceblue; */
 }
 
 .side-nav-close-icon {

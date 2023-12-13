@@ -1,5 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useState } from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation
+} from "react-router-dom";
+import { useEffect, useState } from "react";
 import ValueContext from "./components/re-usable components/ValueContext";
 import productArray from "./components/re-usable components/productArray";
 import ProductDetails from "./screens/ProductDetais";
@@ -9,6 +13,9 @@ import Product from "./screens/Products";
 import Cart from "./screens/Cart";
 import Subscription from "./screens/Subscription";
 import ForgotPassword from "./screens/ForgotPassword";
+import About from "./screens/About";
+import Contact from "./screens/Contact";
+import CustomOrder from "./screens/CustomOrder";
 // import "./App.css";
 function App() {
   const routes = createBrowserRouter([
@@ -20,6 +27,14 @@ function App() {
     {
       path: "/products",
       element: <Product />
+    },
+    {
+      path: "/about",
+      element: <About />
+    },
+    {
+      path: "/contact",
+      element: <Contact />
     },
     {
       path: "/form/:type",
@@ -34,6 +49,10 @@ function App() {
       element: <Subscription />
     },
     {
+      path: "/custom_order",
+      element: <CustomOrder />
+    },
+    {
       path: "/forgot-password",
       element: <ForgotPassword />
     },
@@ -46,14 +65,7 @@ function App() {
   const localCart = JSON.parse(localStorage.getItem("cart")) || [];
   // console.log(v);
   const [cart, setCart] = useState(localCart);
-  // cart.
-  // return (
-  //   <>
 
-  //     {/* <Home /> */}
-  //     {/* <Product /> */}
-  //     {/* <Cart /> */}
-  //   </>
   return (
     <ValueContext.Provider value={{ cart, setCart, productArray }}>
       <RouterProvider router={routes} />
