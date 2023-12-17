@@ -100,7 +100,7 @@ function NavBar({ bg }) {
           <Link to="/custom_order">
             <li
               className={
-                window.location.pathname == "/contact"
+                window.location.pathname == "/custom_order"
                   ? "hLinks contact li-active"
                   : "hLinks contact"
               }

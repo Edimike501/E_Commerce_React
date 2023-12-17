@@ -79,7 +79,9 @@ function CustomOrder() {
             <i className="fa-regular fa-file-lines"></i>
           </div>
           <div className="btn">
-            <button onclick="customOrder(event)">send request</button>
+            <button onClick={(event) => customOrder(event)}>
+              send request
+            </button>
           </div>
         </form>
       </div>

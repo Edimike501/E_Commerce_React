@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import NavBar from "./re-usable components/NavBar";
 import Space from "./re-usable components/Space";
-import ContactSection from "./re-usable components/ContactSection";
 import Footer from "./re-usable components/Footer";
 
 function Login() {
@@ -30,7 +29,7 @@ function Login() {
             <Link to="/form/signup">sign up</Link>
           </div>
           <div className="btn">
-            <button onclick="change(event)">login</button>
+            <button onClick={(event) => change(event)}>login</button>
           </div>
         </form>
       </div>

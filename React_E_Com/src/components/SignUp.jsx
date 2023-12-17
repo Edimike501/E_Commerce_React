@@ -1,5 +1,4 @@
 import NavBar from "./re-usable components/NavBar";
-import ContactSection from "./re-usable components/ContactSection";
 import Space from "./re-usable components/Space";
 import Footer from "./re-usable components/Footer";
 import { Link } from "react-router-dom";
@@ -47,7 +46,7 @@ function SignUp() {
             <Link to="/form/login">login</Link>
           </div>
           <div className="btn">
-            <button onclick="change(event)">sign up</button>
+            <button onClick={(event) => hange(event)}>sign up</button>
           </div>
         </form>
       </div>

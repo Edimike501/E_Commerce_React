@@ -86,7 +86,7 @@ function ProductDisplay({ limit }) {
                 <i className="icofont-book-mark"></i>
               </div>
               <div className="image flex-it">
-                <img src={shoe1} alt="" />
+                <img src={"/Media/shoe1.png"} alt="" />
               </div>
               <div className="det">
                 <p className="name">{product.title}</p>
