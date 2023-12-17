@@ -64,7 +64,6 @@ form .field i {
 }
 
 form .field input {
-  /* margin-top: 16px; */
   width: 100%;
   background-color: transparent;
   border: none;

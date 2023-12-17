@@ -35,7 +35,6 @@ function Login() {
         </form>
       </div>
       <Space />
-      {/* <ContactSection /> */}
       <Footer />
     </div>
   );

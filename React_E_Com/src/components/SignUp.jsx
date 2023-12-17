@@ -52,7 +52,6 @@ function SignUp() {
         </form>
       </div>
       <Space amt={30} />
-      // <ContactSection />
       <Footer />
     </div>
   );

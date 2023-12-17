@@ -178,13 +178,8 @@ div.header-cart .cart:hover P {
   top: 130%;
   right: 50%;
   z-index: 1;
-  /* transform: translateX(50%); */
-  /* transform: scaleY(0); */
   transform-origin: top;
   transition: 0.3s ease;
-  /* width: auto; */
-  /* opacity: 0; */
-  /* max-width: 350px; */
   width: 320px;
   background-color: var(--bg);
   padding: 1.2rem;
@@ -194,8 +189,6 @@ div.header-cart .cart:hover P {
 .drop-cart {
   transform: scaleY(1);
   opacity: 1;
-  /* display: none; */
-  /* background-color: var(--red); */
 }
 
 .nav-cont div.right-side-header div.header-cart .cart-det .caret {
@@ -233,7 +226,6 @@ div.header-cart .cart:hover P {
   margin: 0.7rem 0;
   max-height: 280px;
   overflow-y: scroll;
-  /* background-color: var(--gray); */
 }
 
 .nav-cont
@@ -245,7 +237,6 @@ div.header-cart .cart:hover P {
 }
 
 .nav-cont div.right-side-header div.header-cart .cart-det .products > .product {
-  /* background-color: var(--bg1); */
   width: 100%;
   height: 90px;
   display: grid;
@@ -253,7 +244,6 @@ div.header-cart .cart:hover P {
   grid-template-rows: 100%;
   margin-bottom: 0.7rem;
   border-bottom: 1px solid var(--bg1);
-  /* color: var(--dim-black) !important; */
 }
 
 .nav-cont
@@ -263,8 +253,6 @@ div.header-cart .cart:hover P {
   .products
   > .product
   img {
-  /* width: 100%; */
-  /* background-color: var(--pink); */
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -277,7 +265,6 @@ div.header-cart .cart:hover P {
   .products
   > .product
   .name {
-  /* background-color: #000; */
   max-width: 100%;
   font-size: 14px;
   color: var(--dim-black);
@@ -338,10 +325,6 @@ div.header-cart .cart:hover P {
   cursor: pointer;
 }
 
-/* .nav-cont div.right-side-header div.header-car .drop {
-  color: var(--bg1);
-} */
-
 .nav-cont div.right-side-header div.header-cart .drop {
   font-size: 15px;
   margin-left: 15px;
@@ -370,7 +353,6 @@ div.header-cart .cart:hover P {
   display: none;
   opacity: 0;
   z-index: 10;
-  /* transition: .8s cubic-bezier(0.77, 0, 0.175, 1); */
   transition: 0.8s ease;
 }
 .side-nav-sub {
@@ -427,10 +409,6 @@ div.header-cart .cart:hover P {
 @media (max-width: 820px) {
   .nav-cont ul.links li {
     display: none;
-  }
-
-  .right-side-header {
-    /* align-items: flex-end; */
   }
 
   #toFormPg {

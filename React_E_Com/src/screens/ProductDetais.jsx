@@ -1,10 +1,9 @@
 import { useContext, useRef, useEffect } from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import NavBar from "../components/re-usable components/NavBar";
 import Footer from "../components/re-usable components/Footer";
 import ValueContext from "../components/re-usable components/ValueContext";
 import Alert from "../components/re-usable components/Alert";
-// import shoe1 from /Media/shoe1.png";
 import "./css/ProductDetails.css";
 
 function ProductDetails() {
@@ -21,23 +20,25 @@ function ProductDetails() {
   const data =
     cart.find((item) => item.id == productId) ||
     productArray.find((item) => item.id == productId);
-  console.log(data);
+
   const changeQty = (increase) => {
     if (increase) {
-      console.log("inc");
       let products = cart.map((c) => {
         if (c.id == productId) c.qty++;
         return c;
       });
+
       setCart(() => products);
       localStorage.setItem("cart", JSON.stringify(products));
       Alert(alertElement.current, "product updated successfully");
       return;
     }
+
     let products = cart.map((c) => {
       if (c.id == productId) c.qty--;
       return c;
     });
+
     setCart(() => products);
     localStorage.setItem("cart", JSON.stringify(products));
     Alert(alertElement.current, "product updated successfully");
@@ -50,8 +51,9 @@ function ProductDetails() {
       Alert(alertElement.current, "product already in cart");
       return;
     }
+
     const products = [...cart, { ...data, qty: 1 }];
-    // console.log(products);
+
     setCart(() => products);
     localStorage.setItem("cart", JSON.stringify(products));
     Alert(alertElement.current, "product added successfully");

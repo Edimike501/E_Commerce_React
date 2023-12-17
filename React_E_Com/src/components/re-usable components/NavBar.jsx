@@ -1,9 +1,6 @@
-import { useRef, useEffect, useContext } from "react";
+import { useRef, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ValueContext from "./ValueContext";
-import Alert from "./Alert";
-import logo from "/Media/nav-logo.png";
-import shoe1 from "/Media/shoe1.png";
 import "./css/NavBar.css";
 import "./css/Alert.css";
 
@@ -50,7 +47,11 @@ function NavBar({ bg }) {
         <div className="alert-cont" ref={alertElement}></div>
         <ul className="links flex">
           <Link to="/">
-            <img src={logo} alt="nav-logo" className="nav-logo" />
+            <img
+              src={"/Media/nav-logo.png"}
+              alt="nav-logo"
+              className="nav-logo"
+            />
           </Link>
           <Link to="/">
             <li

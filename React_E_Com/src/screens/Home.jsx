@@ -5,8 +5,6 @@ import Space from "../components/re-usable components/Space";
 import ProductDisplay from "../components/re-usable components/ProductDisplay";
 import ContactSection from "../components/re-usable components/ContactSection";
 import Footer from "../components/re-usable components/Footer";
-import Alert from "../components/re-usable components/Alert";
-import hero from "/Media/banner14.jpg";
 import "./css/Home.css";
 
 function Home() {
@@ -19,11 +17,10 @@ function Home() {
   const ref = useRef();
   return (
     <div className="hold">
-      {/* <Alert bg="var(--pink)" content="added successfully" /> */}
       <div className="hero">
         <div
           className="hero-img"
-          style={{ backgroundImage: `url('${hero}')` }}
+          style={{ backgroundImage: `url('/Media/banner14.jpg')` }}
         ></div>
         <div>
           <NavBar bg={false} />

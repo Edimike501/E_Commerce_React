@@ -2,11 +2,7 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useRef } from "react";
 import Alert from "../components/re-usable components/Alert";
 import ValueContext from "../components/re-usable components/ValueContext";
-import NavBar from "../components/re-usable components/NavBar";
-import Footer from "../components/re-usable components/Footer";
-import ProductDisplay from "../components/re-usable components/ProductDisplay";
 import Space from "../components/re-usable components/Space";
-import shoe1 from "/Media/shoe1.png";
 
 import "./css/Cart.css";
 
@@ -21,22 +17,23 @@ function Cart() {
 
   const changeQty = (e, increase) => {
     const id = e.target.parentElement.firstElementChild.value;
-    let data = cart.find((c) => c.id == id);
-    // console.log(id, data);
     if (increase) {
       let products = cart.map((c) => {
         if (c.id == id) c.qty++;
         return c;
       });
+
       setCart(() => products);
       localStorage.setItem("cart", JSON.stringify(products));
       Alert(alertElement.current, "product updated successfully");
       return;
     }
+
     let products = cart.map((c) => {
       if (c.id == id) c.qty--;
       return c;
     });
+
     setCart(() => products);
     localStorage.setItem("cart", JSON.stringify(products));
     Alert(alertElement.current, "product updated successfully");
@@ -47,7 +44,6 @@ function Cart() {
     const index = cart.findIndex((cart) => cart.id == id);
     const products = cart.map((c) => c);
     products.splice(index, 1);
-    console.log(products);
     setCart(() => products);
     localStorage.setItem("cart", JSON.stringify(products));
   };
@@ -81,7 +77,7 @@ function Cart() {
                 className="fa-regular fa-trash-can del-order"
                 onClick={deleteItem}
               ></i>
-              <img src={shoe1} alt="order-img" />
+              <img src={"/Media/shoe1.png"} alt="order-img" />
               <div className="order-det">
                 <div>
                   <div>

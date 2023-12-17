@@ -17,7 +17,6 @@ function About() {
   return (
     <div>
       <NavBar bg={true} />
-      {/* <Space amt={30} /> */}
       <div className="mission">
         <div className="maxWidth mission-sub">
           <div className="det">

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import Alert from "./Alert";
 import "./css/Alert.css";
 import "./css/Footer.css";
@@ -18,7 +18,7 @@ function Footer() {
   };
 
   const handleApi = async (email) => {
-    const response = await axios.post(
+    /* const response = await axios.post(
       "http://localhost:8080/subscribe_newsletter",
       { email }
     );
@@ -30,7 +30,7 @@ function Footer() {
     } else {
       Alert(alertElement.current, "already subscribed");
     }
-    console.log(response.data, response.status);
+    console.log(response.data, response.status); */
   };
 
   return (
